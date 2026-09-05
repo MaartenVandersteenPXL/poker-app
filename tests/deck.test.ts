@@ -3,10 +3,10 @@ import {Deck} from "../src/models/Deck";
 
 describe("Deck", () => {
     it("should contain an array of 52 Cards", () => {
-        let deck1 : Deck = new Deck();
+        let deck : Deck = new Deck();
         for(let i=0;i<=51; i++) {
-            deck1.draw()
+            deck.draw()
         }
-        expect(() => {deck1.draw()}).toThrow("the deck is empty")
+        expect(() => {deck.draw()}).toThrow("the deck is empty")
     })
 })
