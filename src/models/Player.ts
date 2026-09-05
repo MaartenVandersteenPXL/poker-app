@@ -17,7 +17,7 @@ export class Player {
         }
         if(bet> this.chips )
         { bet = this.chips;
-            this.status=Status.AllIn
+            this.status=Status.AllIn;
         }
         this.chips -= bet;
         return bet;
@@ -25,6 +25,12 @@ export class Player {
 
     public receiveCard(card : Card) : void {
         this.hand.push(card)
+    }
+
+    public fold() : void {
+        if(this.status != Status.Active) {
+            throw new Error("player can not fold in current situation")
+        } else {this.status = Status.Folded;}
     }
 
     get currentChips() : number {
