@@ -46,4 +46,8 @@ export class Player {
         return this.status
     }
 
+    public collectPot(pot : number) : void {
+        this.chips += pot
+    }
+
 }
