@@ -54,7 +54,7 @@ export function determineHandStrength(hand : Card[]) : HandResult {
 }
 
 function getRankFrequencies(hand : Card[]) : Map<Rank, number> {
-    let frequencies = new Map<Rank, number>;
+    let frequencies = new Map<Rank, number>();
     for(let i=0; i<hand.length; i++ ) {
         let teller : number = 1;
         if(frequencies.has(hand[i].rank)) {

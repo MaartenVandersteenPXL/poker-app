@@ -15,7 +15,7 @@ export class Player {
         if(this.status != Status.Active) {
             throw new Error("can't place bet when not in game or when all-in")
         }
-        if(bet> this.chips )
+        if(bet >= this.chips )
         { bet = this.chips;
             this.status=Status.AllIn;
         }
